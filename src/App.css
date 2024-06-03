@@ -1,0 +1,33 @@
+.background {
+  min-height: 100vh;
+  color: #693061;
+  background: rgba(255, 255, 255, 0.911);
+}
+
+.background-imagen {
+  background-image: url('/public/numerologia.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex.justify-content-center h1,
+.d-flex.justify-content-center h2,
+.d-flex.justify-content-center p,
+.d-flex.justify-content-center img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.btn-calcular {
+  width: 150px;
+  margin: 0 auto;
+}
+
+
