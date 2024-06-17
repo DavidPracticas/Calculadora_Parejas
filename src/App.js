@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 import { Col, Row, FloatingLabel, Form, Container, Button } from 'react-bootstrap';
 
+// Imágen de logotipo
+
+import logo from './img/Logo_numerologia_cotidiana.png'
+
 // Imágenes para los tipos de pareja
 import parejaNatural from './img/ParejaNat.png';
 import parejaCompatible from './img/ParejaCom.png';
@@ -153,17 +157,17 @@ const App = () => {
 
   return (
     <body>
-      <Container fluid className='background-imagen'>
+      <header className="App-header">
+        <Container fluid className='d-flex justify-content-center'>
+          <img src={logo} alt="Logotipo" style={{ width: '330px', height: 'auto', padding: '10px'}} />
+        </Container>
+      </header>
+
+      <Container fluid className='background-color'>
         <div className='App background'>
-          <header className="App-header mt-5">
-            <Container fluid>
-              <Row>
-                <Col className="d-flex justify-content-center ">
-                  <h1>Calculadora de parejas</h1>
-                </Col>
-              </Row>
-            </Container>
-          </header>
+          <Container fluid className='d-flex justify-content-center'>
+            <h1 style={{ margin: '10px'}}>Calculadora de parejas</h1>
+          </Container>
 
           <Container className="mt-3">
             <Form>
@@ -174,12 +178,11 @@ const App = () => {
                       <Form.Control type="text" value={nombre1} onChange={cambioNombre1} />
                     </FloatingLabel>
                   </Col>
-                  {nombre1 && (
+                  
                     <Col md="auto" className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre1 && (
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectDia1" label="Día de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioDias1}>
@@ -188,13 +191,11 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
-                  {nombre1 && seleccionarDia1 && (
+                  
                     <Col md="auto" className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre1 && seleccionarDia1 && (
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectMes1" label="Mes de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioMes1}>
@@ -214,13 +215,11 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
-                  {nombre1 && seleccionarDia1 && seleccionarMes1 && (
+                  
                     <Col md="auto" className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre1 && seleccionarDia1 && seleccionarMes1 && (
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectYear1" label="Año de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioYear1}>
@@ -229,12 +228,11 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
-                  {nombre1 && seleccionarDia1 && seleccionarMes1 && seleccionarYear1 && (
+                  
                     <Col md="auto" className="d-flex justify-content-center">
-                      <h1> = {sumaTotalReducida1}</h1>
+                      <h1 style={{ margin: '10px'}}> = {sumaTotalReducida1}</h1>
                     </Col>
-                  )}
+                
                 </Row>
               </Form.Group>
 
@@ -245,12 +243,12 @@ const App = () => {
                       <Form.Control type="text" value={nombre2} onChange={cambioNombre2} />
                     </FloatingLabel>
                   </Col>
-                  {nombre2 && (
+                  
                     <Col md="auto" className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre2 && (
+                  
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectDia2" label="Día de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioDias2}>
@@ -259,13 +257,13 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
-                  {nombre2 && seleccionarDia2 && (
+                  
+                  
                     <Col md="auto" className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre2 && seleccionarDia2 && (
+                  
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectMes2" label="Mes de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioMes2}>
@@ -285,14 +283,14 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
+                  
 
-                  {nombre2 && seleccionarDia2 && seleccionarMes2 && (
+                  
                     <Col md='auto' className="d-flex justify-content-center">
                       <h1>+</h1>
                     </Col>
-                  )}
-                  {nombre2 && seleccionarDia2 && seleccionarMes2 && (
+                  
+                  
                     <Col md className="d-flex justify-content-center">
                       <FloatingLabel controlId="floatingSelectYear2" label="Año de Nacimiento">
                         <Form.Select aria-label="Floating label select example" onChange={cambioYear2}>
@@ -302,12 +300,12 @@ const App = () => {
                         </Form.Select>
                       </FloatingLabel>
                     </Col>
-                  )}
-                  {nombre2 && seleccionarDia2 && seleccionarMes2 && seleccionarYear2 && (
+                  
+                  
                     <Col md="auto" className="d-flex justify-content-center">
-                      <h1> = {sumaTotalReducida2}</h1>
+                      <h1 style={{ margin: '10px'}}> = {sumaTotalReducida2}</h1>
                     </Col>
-                  )}
+                  
                 </Row>
               </Form.Group>
             </Form>
@@ -340,6 +338,11 @@ const App = () => {
           </Container>
         </div>
       </Container>
+
+      <footer className="text-white text-center">
+        <img src={logo} alt="Logotipo" style={{ width: '330px', height: 'auto', padding: '10px' }} />
+      </footer>
+    
     </body>
 
   );

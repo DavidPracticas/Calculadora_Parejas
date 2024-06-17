@@ -1,17 +1,15 @@
 .background {
-  min-height: 100vh;
+  min-height: 75vh;
   color: #693061;
-  background: rgba(255, 255, 255, 0.911);
+  background: rgba(222, 220, 220, 0.911);
 }
 
-.background-imagen {
-  background-image: url('/public/numerologia.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.background-color {
+  background-color: white;
+}
+
+header,footer{
+  background-color: #693061;
 }
 
 .d-flex.justify-content-center h1,
@@ -24,6 +22,11 @@
   text-align: center;
 }
 
+p{
+  padding-left: 250px;
+  padding-right: 250px;
+  margin: 10px;
+}
 
 .btn-calcular {
   width: 150px;
